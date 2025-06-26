@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Academic Portal</h2>
+    <p>Class Management</p>
+    <ul>
+      <li><a href="#profiles">Student Profiles</a></li>
+      <li><a href="#notes">Class Notes</a></li>
+      <li><a href="#attendance">Attendance</a></li>
+      <li><a href="#chat">Class Chat</a></li>
+      <li><a href="#exam">Exam Keys</a></li>
+      <li><a href="#events">Events</a></li>
+    </ul>
+  </div>
+  <div class="main">
+    <header>
+    <h1 style="color: white; font-size: 40px;">Academic Portal</h1>
+      <p>Your comprehensive class management system</p>
+    </header>
+
+    <section class="stats">
+      <div class="card">
+        <h3>Total Students</h3>
+        <p>24</p>
+      </div>
+      <div class="card">
+        <h3>Class Notes</h3>
+        <p>47 Documents</p>
+      </div>
+      <div class="card">
+        <h3>Average Attendance</h3>
+        <p>89%</p>
+      </div>
+      <div class="card">
+        <h3>Upcoming Events</h3>
+        <p>3 This Week</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="card">
+        <h3>Student Profiles</h3>
+        <p>Manage individual profiles and achievements.</p>
+      </div>
+      <div class="card">
+        <h3>Class Notes</h3>
+        <p>Access organized notes and materials.</p>
+      </div>
+      <div class="card">
+        <h3>Attendance Calculator</h3>
+        <input type="number" id="total" placeholder="Total Classes" />
+        <input type="number" id="attended" placeholder="Attended Classes" />
+        <button onclick="calculateAttendance()" id="attendedbut">Calculate</button>
+        <p id="result"></p>
+      </div>
+      <div class="card" id="clann">
+        <h3 id="ann">Class Announcement</h3>
+        <input type="text" id="message" placeholder="Type a message..." />
+        <button onclick="sendMessage()"id="sendbut" >Send</button>
+        <div class="chatBox" id="chatBox"></div>
+      </div>
+      <div class="card">
+        <h3>Exam Keys</h3>
+        <p>Download answer keys and solutions.</p>
+      </div>
+      <div class="card">
+        <h3>Important Events</h3>
+        <p>Stay updated with class schedules and deadlines.</p>
+      </div>
+    </section>
+
+    <section class="events">
+      <div class="card">
+        <h3>Upcoming Events</h3>
+        <ul>
+          <li>Mid-term Examinations - Dec 15–20</li>
+          <li>Project Submission Deadline - Dec 10</li>
+          <li>Guest Lecture – AI Ethics - Dec 5</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Class Overview</h3>
+        <ul>
+          <li>Active Discussions: 5</li>
+          <li>Pending Assignments: 2</li>
+          <li>Recent Notes: 8</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Academic Portal | SRM University</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+
+
+</body>
+</html>

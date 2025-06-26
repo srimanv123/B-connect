@@ -1,0 +1,126 @@
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(140deg, #0000FF 30%, #FFA500 70%);
+
+      display: flex;
+      font-size: 35px;
+    }
+    .sidebar {
+      width: 320px;
+      background-color: #1f2937;
+      color: white;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      
+    }
+    .sidebar ul {
+      list-style: none;
+    }
+    .sidebar ul li {
+      margin: 10px 0;
+    }
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .main {
+      flex: 1;
+      padding: 20px;
+    }
+    header h1 {
+      font-size: 24px;
+      color: #1f2937;
+    }
+    .stats {
+      display: flex;
+      gap: 50px;
+      margin: 20px 0;
+    }
+    .card {
+      background: white;
+      padding: 130px;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      flex: 1;
+      text-align: center;
+    }
+    .features, .events {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    .chatBox {
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 10px;
+      height: 120px;
+      overflow-y: auto;
+      border-radius: 8px;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+    }
+header{
+  color: white;
+}
+h1{
+  color: white;
+}
+#ann{
+  margin: 0;
+  
+}
+#clann{
+  padding:90px;
+}
+#total{
+  width: 250px;
+  height: 60px;
+  font-size: 25px;
+}
+ #attended{
+  width: 250px;
+  height: 60px;
+   font-size: 25px;
+ }
+ #message{
+  width: 250px;
+  height: 60px;
+  font-size: 25px;
+ }
+ #attendedbut{
+  width: 250px;
+  height: 60px;
+  font-size: 25px;
+  border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   background: linear-gradient(140deg, #0000FF 30%, #FFA500 70%);
+   color: white;
+  
+ }
+ #sendbut{
+  width: 250px;
+  height: 60px;
+  font-size: 25px;
+  background: linear-gradient(140deg, #0000FF 30%, #FFA500 70%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+ }
