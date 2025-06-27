@@ -16,7 +16,7 @@ body {
             left: 50%;
             transform: translate(-50%, -50%);
             width: 500px;
-            height: 400px;
+            height: 540px;
               background: rgba(239, 233, 233, 0.5); 
   backdrop-filter: blur(2px);   
   -webkit-backdrop-filter: blur(2px);
@@ -75,4 +75,5 @@ body {
     width: 20px;
     height: 20px;
          }
+
     
