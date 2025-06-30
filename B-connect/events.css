@@ -1,0 +1,133 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9fbfd;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.events-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 10px auto 30px;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.event-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.event-date {
+  font-weight: bold;
+  color: #2b6cb0;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.event-date .day {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.event-date .month {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.badge.blue {
+  background: #e0f0ff;
+  color: #007bff;
+}
+
+.badge.green {
+  background: #e3fceb;
+  color: #28a745;
+}
+
+.event-info h2 {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.event-info p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.btn {
+  margin-top: 15px;
+  background: #2563eb;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+.btn-outline {
+  background: white;
+  border: 1px solid #dbeafe;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.view-all {
+  margin-top: 20px;
+}
