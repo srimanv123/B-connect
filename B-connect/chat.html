@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Class Chat</title>
+  <link rel="stylesheet" href="chat.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    .sent {
+      align-self: flex-end;
+      text-align: right;
+    }
+
+    .sent .bubble {
+      background-color: #2563eb;
+      color: white;
+      border-radius: 15px;
+      padding: 10px 15px;
+      margin-top: 5px;
+      max-width: 60%;
+      border-bottom-right-radius: 0;
+    }
+
+    .sent .timestamp, .sent .sender {
+      font-size: 12px;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    .received {
+      align-self: flex-start;
+      text-align: left;
+    }
+
+    .received .bubble {
+      background-color: #f0f0f0;
+      color: #000;
+      border-radius: 15px;
+      padding: 10px 15px;
+      margin-top: 5px;
+      max-width: 60%;
+      border-bottom-left-radius: 0;
+    }
+
+    .received .timestamp, .received .sender {
+      font-size: 12px;
+      color: #888;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      💬 <span>Class Chat</span>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="message received">
+        <div class="sender">Instructor</div>
+        <div class="bubble">Sure! The key is to use integration by parts. Let me know if you need more details.</div>
+        <div class="timestamp">9:25 AM</div>
+      </div>
+
+      <div class="message received">
+        <div class="sender">Alexandra</div>
+        <div class="bubble">That's so helpful! Thanks for always being willing to explain things.</div>
+        <div class="timestamp">9:28 AM</div>
+      </div>
+
+      <div class="message received">
+        <div class="sender">Sriman</div>
+        <div class="bubble">Got it! That makes so much more sense now. You're a lifesaver! 🙏</div>
+        <div class="timestamp">9:32 AM</div>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Type your message..." />
+      <button onclick="sendMessage()">
+        <img src="https://cdn-icons-png.flaticon.com/512/724/724715.png" alt="send" />
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById("chatInput");
+      const message = input.value.trim();
+      if (message === "") return;
+
+      const chatMessages = document.getElementById("chatMessages");
+
+      const msgDiv = document.createElement("div");
+      msgDiv.className = "message sent";
+
+      const senderDiv = document.createElement("div");
+      senderDiv.className = "sender";
+      senderDiv.textContent = "You";
+
+      const bubbleDiv = document.createElement("div");
+      bubbleDiv.className = "bubble";
+      bubbleDiv.textContent = message;
+
+      const timestampDiv = document.createElement("div");
+      timestampDiv.className = "timestamp";
+      const now = new Date();
+      timestampDiv.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+      msgDiv.appendChild(senderDiv);
+      msgDiv.appendChild(bubbleDiv);
+      msgDiv.appendChild(timestampDiv);
+
+      chatMessages.appendChild(msgDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+
+      input.value = "";
+    }
+  </script>
+</body>
+</html>
