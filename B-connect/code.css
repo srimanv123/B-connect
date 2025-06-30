@@ -51,7 +51,7 @@ h1 {
   color: #333;
 }
 
-.code {
+.codeDisplay {
   background: linear-gradient(to right, #00c06d, #00a852);
   color: white;
   font-weight: bold;

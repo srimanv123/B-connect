@@ -1,47 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SRM AP Portal</title>
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div class="main">
-        
-        <div class="box-left">
-            <h1 class="slide-in" style="color: rgb(231, 231, 237); font-family: Poppins, sans-serif; font-weight: 600; font-style: normal; text-align: center; font-size: 3rem;">
-                Welcome Back!
-            </h1>
-            <style>
-                .slide-in {
-                    opacity: 0;
-                    transform: translateX(-100%);
-                    animation: slideInLeft 3s forwards;
-                }
-                @keyframes slideInLeft {
-                    to {
-                        opacity: 1;
-                        transform: translateX(0);
-                    }
-                }
-            </style>
+  <div class="login-container">
+    <div class="login-box">
+      <div class="avatar">👤</div>
+      <h1>B-Connect Portal</h1>
+      <p class="subtitle">Sign in to your account to continue</p>
+
+      <form onsubmit="return handleLogin(event)">
+        <label>Username</label>
+        <input type="text" placeholder="Enter your username" id="username" required />
+
+        <label>Password</label>
+        <div class="password-field">
+          <input type="password" placeholder="Enter your password" id="password" required />
+          <span class="toggle-password" onclick="togglePassword()">👁️</span>
         </div>
-        <div class="box-right">
-            <h1>Login Now</h1>
-            <span>Enter your credentials to access your account</span>
-            <h3 id="regtext">Register Number or Email</h3>
-            <input type="text" id="EmailL" placeholder="Register Number or Email" required>
-            <h3 id="passtext" style="text-align: left;">Password</h3>
-            <input type="password" id="passL" placeholder="Enter Password" required>
-            <div class"checkbox">
-                <input type="checkbox" id="rememberMe">
-                <label for="rememberMe">Remember me</label>
-            </div>
-            <button type="button" style="width: 300px; height: 35px;border-radius: 15px;margin-left: 0%;"><a href="main.html" style="text-decoration: none;color: black;">Login</a></button>
-            <p>Don't have an account? <a href="#" style="text-decoration: none;">Register Now</a></p>
-            <p style="font-size: 1.2rem;"><a href="#">Reset Password</a>   |   <a href="#">Emergency Login</a></p>
+
+        <div class="options">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="forgotpass.html">Forgot password?</a>
         </div>
+
+        <button type="submit">Sign In</button>
+      </form>
+
+      <p class="signup">Don't have an account? <a href="register.html">Sign up here</a></p>
     </div>
+    <footer>
+      © 2024 SRM AP. All rights reserved. <br/>
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Help</a>
+    </footer>
+  </div>
+
+  <script src="login.js"></script>
 </body>
 </html>

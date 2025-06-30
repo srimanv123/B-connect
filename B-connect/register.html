@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join SRM AP</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <div class="signup-container">
+    <div class="signup-box">
+      <div class="avatar">B</div>
+      <h1>Join B-Connect</h1>
+      <p class="subtitle">Create your account to get started</p>
+
+      <form onsubmit="return handleSignUp(event)">
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Choose a username" required />
+
+        <label>Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+
+        <label>Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required />
+
+        <label>Password</label>
+        <div class="password-field">
+          <input type="password" id="password" placeholder="Create a password" required />
+          <span class="toggle-password" onclick="togglePassword('password')">👁️</span>
+        </div>
+
+        <label>Confirm Password</label>
+        <div class="password-field">
+          <input type="password" id="confirmPassword" placeholder="Confirm your password" required />
+          <span class="toggle-password" onclick="togglePassword('confirmPassword')">👁️</span>
+        </div>
+
+        <button type="submit">Create Account</button>
+      </form>
+
+      <p class="signin-link">Already have an account? <a href="login.html">Sign in here</a></p>
+    </div>
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>
