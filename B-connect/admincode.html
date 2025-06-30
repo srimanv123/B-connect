@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Classroom Attendance</title>
+  <link rel="stylesheet" href="admincode.css" />
+</head>
+<body>
+  <div class="container">
+    <button class="back-button">← Student Page</button>
+    <h1>Classroom Attendance</h1>
+    <p class="subtext">Faculty Display - Set your attendance code and duration</p>
+
+    <div class="setup-box">
+      <div class="icon">👥</div>
+      <h2>Setup Attendance Session</h2>
+
+      <label for="code">Attendance Code</label>
+      <div class="input-group">
+        <input type="text" id="code" placeholder="Enter attendance code" />
+        <button onclick="generateCode()">🔄</button>
+      </div>
+
+      <label for="duration">Duration (seconds)</label>
+      <input type="number" id="duration" value="25" />
+
+      <button class="start-btn" onclick="startSession()">▶ Start Attendance Session</button>
+    </div>
+
+    <div class="instructions">
+      <h3>Instructions:</h3>
+      <ul>
+        <li>Faculty: Enter your desired attendance code and duration</li>
+        <li>Students: Enter the displayed code on your device to mark attendance</li>
+        <li>Each session is valid only for the specified duration</li>
+        <li>Use the random generator button for quick code creation</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="admincode.js"></script>
+</body>
+</html>

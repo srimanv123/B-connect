@@ -1,0 +1,114 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #eef2fd;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.back-button {
+  background-color: white;
+  border: none;
+  padding: 10px 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 28px;
+  color: #111;
+}
+
+.subtext {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.setup-box {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.icon {
+  font-size: 40px;
+  color: #bbb;
+  text-align: center;
+}
+
+.setup-box h2 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.input-group input {
+  flex-grow: 1;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.input-group button {
+  padding: 0 14px;
+  border: none;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.start-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.instructions {
+  background-color: white;
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 25px;
+  text-align: left;
+}
+
+.instructions h3 {
+  margin-top: 0;
+}
+
+.instructions ul {
+  padding-left: 20px;
+}

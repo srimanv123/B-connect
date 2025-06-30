@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Attendance</title>
+  <link rel="stylesheet" href="code.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Student Attendance</h1>
+    <p class="subtext">Current attendance code from your instructor</p>
+
+    <div class="attendance-box">
+      <div class="icon">👥</div>
+      <p class="code-label">Attendance Code</p>
+      <div class="code">ABC123</div>
+      <p class="timer"><span id="time">20</span>s remaining</p>
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <h3>Instructions:</h3>
+      <ul>
+        <li>The attendance code is displayed above when active</li>
+        <li>Click "Mark My Attendance" before time expires</li>
+        <li>Each session is time-limited by your instructor</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="code.js"></script>
+</body>
+</html>
