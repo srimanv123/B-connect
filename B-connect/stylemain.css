@@ -115,6 +115,7 @@ p{
   background-color: white;
   margin-bottom: 10px;
   transition: 0.4s ease;
+  cursor: pointer;
 }
 .top-box h3{
   font-size: 15px;
@@ -170,6 +171,7 @@ p{
   margin-top: 20px;
   margin-right: 30px;
   transition: 0.4s ease;
+  cursor: pointer;
 }
 .bot-left{
   display: flex;
@@ -213,6 +215,7 @@ p{
 .bot-box:hover{
   transform: scale(1.05);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
 }
 .top-box:hover{
   transform: scale(1.05);

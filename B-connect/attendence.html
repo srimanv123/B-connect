@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-      <script src="https://kit.fontawesome.com/2ef310ae91.js" crossorigin="anonymous"></script>
-
+  <script src="https://kit.fontawesome.com/2ef310ae91.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Attendance Calculator</title>
   <link rel="stylesheet" href="attendence.css" />
@@ -12,17 +11,17 @@
 <body>
   <div class="container">
     <div class="icon">
-      <i class="fa-solid fa-calculator"alt="Calculator Icon"></i>
+      <i class="fa-solid fa-calculator" alt="Calculator Icon"></i>
     </div>
     <h1>Attendance Calculator</h1>
     <p class="subtitle">Track your class attendance and eligibility status</p>
 
     <div class="form-card">
-      <label>Total Classes Conducted</label>
-      <input type="number" id="total" placeholder="Enter total classes" />
+      <label>Faculty Attendance Entered Slots</label>
+      <input type="number" id="total" placeholder="Enter faculty slots" />
 
-      <label>Classes Attended</label>
-      <input type="number" id="attended" placeholder="Enter attended classes" />
+      <label>Student Present Slots</label>
+      <input type="number" id="attended" placeholder="Enter student slots" />
 
       <div class="buttons">
         <button onclick="calculateAttendance()">Calculate Attendance</button>
@@ -30,11 +29,11 @@
       </div>
     </div>
 
-    <div class="result-card" id="resultCard">
+    <div class="result-card" id="resultCard" style="display: none;">
       <h2>Attendance Results</h2>
       <div id="percentage" class="percent">--%</div>
       <div id="status" class="status-label">--</div>
-      <p class="message">You need at least 75% attendance to be eligible</p>
+      <p class="message" id="message">You need at least 75% attendance to be eligible</p>
       <div class="progress-bar">
         <div id="progressFill"></div>
         <div class="markers">
@@ -54,8 +53,9 @@
       const statusElement = document.getElementById("status");
       const progressFill = document.getElementById("progressFill");
       const resultCard = document.getElementById("resultCard");
+      const messageElement = document.getElementById("message");
 
-      if (isNaN(total) || isNaN(attended) || total <= 0 || attended < 0) {
+      if (isNaN(total) || isNaN(attended) || total <= 0 || attended < 0 || attended > total) {
         alert("Please enter valid numbers.");
         return;
       }
@@ -65,11 +65,17 @@
       progressFill.style.width = percentage + "%";
 
       if (percentage >= 75) {
+        // Calculate how many future classes can be skipped
+        const maxSkips = Math.floor((attended - 0.75 * total) / 0.75);
         statusElement.textContent = "✅ Eligible";
         statusElement.className = "status-label eligible";
+        messageElement.textContent = `You can skip up to ${maxSkips} more class${maxSkips !== 1 ? 'es' : ''} and still maintain 75%.`;
       } else {
+        // Calculate how many classes must be attended to reach 75%
+        const requiredClasses = Math.ceil((0.75 * total - attended) / 0.25);
         statusElement.textContent = "❌ Not Eligible";
         statusElement.className = "status-label not-eligible";
+        messageElement.textContent = `You need to attend the next ${requiredClasses} class${requiredClasses !== 1 ? 'es' : ''} to reach 75%.`;
       }
 
       resultCard.style.display = "block";
