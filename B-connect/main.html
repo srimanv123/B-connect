@@ -1,99 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Section B</title>
-    <script src="https://kit.fontawesome.com/2ef310ae91.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="stylemain.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Section B</title>
+  <script src="https://kit.fontawesome.com/2ef310ae91.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="stylemain.css" />
+  <style>
+    /* Add the responsive tweaks directly here for clarity */
+    @media screen and (max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+
+      .left {
+        width: 100%;
+        height: auto;
+        text-align: center;
+      }
+
+      .left ul {
+        padding-left: 0;
+      }
+
+      .right {
+        width: 100%;
+      }
+
+      .top,
+      .bottom {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .top-box,
+      .bot-box {
+        width: 90% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      .butsty {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        gap: 10px;
+      }
+
+      .footer {
+        font-size: 13px;
+        padding: 15px 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="main">
-        <div class="left">
-          <p><i id="book" class="fa-solid fa-book-bookmark"></i> Academic Portal</p>
-          
-          <span>main features</span> 
-          <ul class="left-menu">
-            
-    <li><a href="profile.html"><i class="fa-solid fa-user sideimg"></i>Student profile</a></li>
-    <li><a href="attendence.html"><i class="fa-solid fa-calendar sideimg"></i> Attendence</a></li>
-    <li><a href="chat.html"><i class="fa-solid fa-message sideimg" ></i> Class Chat</a></li>
-    <li><a href="assign.html"><i class="fa-solid fa-key sideimg" ></i>Exam keys</a></li>
-    <li><a href="events.html"><i class="fa-solid fa-bell sideimg"></i> Events</a></li>
-  </ul> 
-            
-        </div>
-        <div class="right">
-            
-            <div class="header-left">
-                <div class="butsty">
-                    <h1 style="background: linear-gradient(to right, #3B82F6, #C2410C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">Academic Portal</h1>
-                    <button>Logout</button>
-                </div>
-            <p>Your comprehensive class management system</p>
-                <div class="top">
-                <div class="top-box attendence">
-                    <h3>Total Students</h3>
-                    <span>67</span>
-                    <h4>Active in Class</h4>
-                </div>
-                <div class="top-box notes">
-                    <h3>Class Notes</h3>
-                    <span>47</span>
-                    <h4>Available documents</h4>
-                </div>
-                <div class="top-box cgpa">
-                    <h3>CGPA</h3>
-                    <span>9.214</span>
-                    <h4>This Semester</h4>
-                </div>
-                <div class="top-box event">
-                    <h3>Upcoming Events</h3>
-                    <span>3</span>
-                    <h4>This week</h4>
-                </div>
-                </div>
-                <p id="main">Main Features</p>
-                <div class="bottom">
-                    
-                   
-                        <div class="bot-box profile">
-                            <i class="fa-solid fa-user sideimg"></i>
-                            <p>Student Profiles</p>
-                            <span>View and manage individual student profiles with academic information and achievments.</span>
-                        </div>
-                        <div class="bot-box calculator" onclick="window.location.href='https://att-calculator.netlify.app/'">
-                            <i class="fa-solid fa-calendar sideimg"></i>
-                            <p>Attendance Calculator</p>
-                            <span>Track and calculate attendance percentages with detailed analytics and reports.</span>
-                        </div>
-                         <div class="bot-box upevents">
-                            <i class="fa-solid fa-bell sideimg"></i>
-                            <p>Upcoming Events</p>
-                            <span>important dates and deadlines</span>
-                        </div>
-                        
-                        <div class="bot-box key">
-                            <i class="fa-solid fa-key sideimg" ></i>
-                            <p>Exam Keys</p>
-                            <span>Access answer keys,solutions,and study materials for examinations.</span>
-                        </div>
-                         <div class="bot-box code" onclick="window.location.href='https://student-att-management.netlify.app/'">
-                            <i class="fa-solid fa-users"></i>
-                            <p>Attendance Code</p>
-                            <span>123456</span>
-                         </div>
-                       <div class="bot-box classnotes">
-                            <i class="fa-solid fa-book"></i>
-                            <p>Class Notes</p>
-                            <span>Access organised course materials,lecture notes,and study resources for all subjects.</span>
-                        </div>
-                    </div> 
-                    
-            </div>
-        </div>
-       
+  <div class="main">
+    <!-- Sidebar -->
+    <div class="left">
+      <p><i id="book" class="fa-solid fa-book-bookmark"></i> Academic Portal</p>
+      <span>Main Features</span>
+      <ul class="left-menu">
+        <li><a href="profile.html"><i class="fa-solid fa-user sideimg"></i>Student profile</a></li>
+        <li><a href="attendence.html"><i class="fa-solid fa-calendar sideimg"></i> Attendence</a></li>
+        <li><a href="chat.html"><i class="fa-solid fa-message sideimg"></i> Class Chat</a></li>
+        <li><a href="assign.html"><i class="fa-solid fa-key sideimg"></i>Exam keys</a></li>
+        <li><a href="events.html"><i class="fa-solid fa-bell sideimg"></i> Events</a></li>
+      </ul>
     </div>
-    
-</body>
 
+    <!-- Main Dashboard -->
+    <div class="right">
+      <div class="header-left">
+        <div class="butsty">
+          <h1 style="background: linear-gradient(to right, #3B82F6, #C2410C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">Academic Portal</h1>
+          <button onclick="window.location.href='login.html'">Logout</button>
+        </div>
+
+        <p>Your comprehensive class management system</p>
+
+        <!-- Top Boxes -->
+        <div class="top">
+          <div class="top-box attendence">
+            <h3>Total Students</h3>
+            <span>67</span>
+            <h4>Active in Class</h4>
+          </div>
+          <div class="top-box notes">
+            <h3>Class Notes</h3>
+            <span>47</span>
+            <h4>Available documents</h4>
+          </div>
+          <div class="top-box cgpa">
+            <h3>CGPA</h3>
+            <span>9.214</span>
+            <h4>This Semester</h4>
+          </div>
+          <div class="top-box event">
+            <h3>Upcoming Events</h3>
+            <span>3</span>
+            <h4>This week</h4>
+          </div>
+        </div>
+
+        <!-- Bottom Boxes -->
+        <p id="main">Main Features</p>
+        <div class="bottom">
+          <div class="bot-box profile">
+            <i class="fa-solid fa-user sideimg"></i>
+            <p>Student Profiles</p>
+            <span>View and manage individual student profiles with academic information and achievements.</span>
+          </div>
+          <div class="bot-box calculator" onclick="window.location.href='https://att-calculator.netlify.app/'">
+            <i class="fa-solid fa-calendar sideimg"></i>
+            <p>Attendance Calculator</p>
+            <span>Track and calculate attendance percentages with detailed analytics and reports.</span>
+          </div>
+          <div class="bot-box upevents">
+            <i class="fa-solid fa-bell sideimg"></i>
+            <p>Upcoming Events</p>
+            <span>Important dates and deadlines</span>
+          </div>
+          <div class="bot-box key">
+            <i class="fa-solid fa-key sideimg"></i>
+            <p>Exam Keys</p>
+            <span>Access answer keys, solutions, and study materials for examinations.</span>
+          </div>
+          <div class="bot-box code" onclick="window.location.href='https://student-att-management.netlify.app/'">
+            <i class="fa-solid fa-users"></i>
+            <p>Attendance Code</p>
+            <span>123456</span>
+          </div>
+          <div class="bot-box classnotes">
+            <i class="fa-solid fa-book"></i>
+            <p>Class Notes</p>
+            <span>Access organised course materials, lecture notes, and study resources for all subjects.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 </html>

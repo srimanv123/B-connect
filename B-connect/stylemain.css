@@ -224,6 +224,76 @@ p{
 .left-menu a:hover{
   color: orange;
 }
+/* Footer Styling */
+.footer {
+  background-color: #04046b;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+    height: auto;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .top,
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-box,
+  .bot-box {
+    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .butsty {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .butsty button {
+    margin-left: 10px;
+  }
+
+  .footer {
+    font-size: 13px;
+    padding: 12px 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .left {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+}
+
 
 
         
