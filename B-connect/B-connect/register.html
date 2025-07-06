@@ -13,7 +13,7 @@
       <h1>Join B-Connect</h1>
       <p class="subtitle">Create your account to get started</p>
 
-      <form onsubmit="return handleSignUp(event)">
+      <form id="registerForm">
         <label>Username</label>
         <input type="text" id="username" placeholder="Choose a username" required />
 
@@ -38,10 +38,67 @@
         <button type="submit">Create Account</button>
       </form>
 
-      <p class="signin-link">Already have an account? <a href="login.html">Sign in here</a></p>
+      <p class="signin-link">Already have an account? <a href="index.html">Sign in here</a></p>
     </div>
   </div>
 
-  <script src="register.js"></script>
+  <!-- Firebase integration -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBVXfxjgtNlF8AQz5dcjz1mdTFdNqA6IZY",
+      authDomain: "login-cdfae.firebaseapp.com",
+      databaseURL: "https://login-cdfae-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "login-cdfae",
+      storageBucket: "login-cdfae.firebasestorage.app",
+      messagingSenderId: "913229807477",
+      appId: "1:913229807477:web:029fe0255c6dc6e7c39d3c"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getDatabase(app);
+
+    document.getElementById("registerForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      try {
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        const uid = userCredential.user.uid;
+
+        // Store user data in Realtime Database
+        await set(ref(db, "users/" + uid), {
+          username: username,
+          email: email,
+          phone: phone
+        });
+
+        alert("Account created successfully!");
+        window.location.href = "index.html";
+      } catch (error) {
+        console.error(error);
+        alert("Error: " + error.message);
+      }
+    });
+
+    window.togglePassword = function (id) {
+      const input = document.getElementById(id);
+      input.type = input.type === "password" ? "text" : "password";
+    };
+  </script>
 </body>
 </html>
