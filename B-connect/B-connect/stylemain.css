@@ -302,7 +302,26 @@ p{
   .main {
     flex-direction: column;
   }
+  .top-box{
+    border: 2px solid #3B82F6;
+  }
 }
+@media screen and (max-width: 365px) {
+  .bot-box{
+    height: 170px;
+    border: 2px solid #C2410C;
+  }
+  .bot-box:hover{
+    border: 2px solid #3B82F6;
+  }
+  .top-box{
+    border: 2px solid #3B82F6;
+  }
+  .top-box:hover{
+    border: 2px solid #C2410C;
+  }
+}
+
 
 
 
