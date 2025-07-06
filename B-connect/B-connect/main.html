@@ -51,6 +51,11 @@
         font-size: 13px;
         padding: 15px 10px;
       }
+      .butsty button:hover {
+        background-color: white;
+        border: 2px solid linear-gradient(to right, #3B82F6, #C2410C);
+        color: linear-gradient(to right, #3B82F6, #C2410C);
+      }
     }
   </style>
 </head>
@@ -74,7 +79,7 @@
       <div class="header-left">
         <div class="butsty">
           <h1 style="background: linear-gradient(to right, #3B82F6, #C2410C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">Academic Portal</h1>
-          <button onclick="window.location.href='login.html'">Logout</button>
+          <button id="logout">Logout</button>
         </div>
 
         <p>Your comprehensive class management system</p>

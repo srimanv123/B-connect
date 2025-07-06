@@ -35,6 +35,7 @@ a{
   margin-top: 9px;
   margin-left: 1px;
   font-size: 17px;
+  transition: 0.5s ease-in-out;
 }
 p{
   font-size: 25px;
@@ -80,7 +81,15 @@ p{
   border: none;
   margin-top: 10px;
   margin-right: 5px;
+  transition: 0.5s ease;
 }
+.butsty button:hover {
+  border: 2px solid #3B82F6;
+  border: 2px solid #C2410C;
+  background: white;
+  color: #3B82F6;
+}
+
 .butsty{
   display: flex;
   justify-content: space-between;
@@ -106,7 +115,7 @@ p{
     display: flex;
 }
 .top-box{
-  width: 300px;
+  width: 297px;
   height: 123px;
   margin-left: 20px;
   border-radius: 10px;
@@ -223,6 +232,7 @@ p{
 }
 .left-menu a:hover{
   color: orange;
+  text-decoration: underline;
 }
 /* Footer Styling */
 .footer {
